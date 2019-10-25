@@ -5,10 +5,6 @@
  */
 package mantenimiento;
 
-import java.io.ByteArrayOutputStream;
-import javax.swing.ImageIcon;
-import net.glxn.qrgen.QRCode;
-import net.glxn.qrgen.image.ImageType;
 /**
  *
  * @author axel
@@ -33,34 +29,33 @@ public class RegistroMotos extends javax.swing.JFrame {
 
         LblRegistroM = new javax.swing.JLabel();
         LblMarcaM = new javax.swing.JLabel();
-        jtMarcaM = new javax.swing.JTextField();
+        txtMarcaM = new javax.swing.JTextField();
         LblModeloM = new javax.swing.JLabel();
-        jtModeloM = new javax.swing.JTextField();
+        txtModelo = new javax.swing.JTextField();
         lblNumeroM = new javax.swing.JLabel();
-        jtNumeroM = new javax.swing.JTextField();
+        txtNumM = new javax.swing.JTextField();
         lblAño = new javax.swing.JLabel();
-        jtAño = new javax.swing.JTextField();
+        txtAño = new javax.swing.JTextField();
         LblPlaca = new javax.swing.JLabel();
-        JtPlaca = new javax.swing.JTextField();
+        txtPlaca = new javax.swing.JTextField();
         LblColor = new javax.swing.JLabel();
-        JtColor = new javax.swing.JTextField();
+        txtColor = new javax.swing.JTextField();
         LblNSerie = new javax.swing.JLabel();
-        JtNSerie = new javax.swing.JTextField();
-        lblQR = new javax.swing.JLabel();
+        txtSerie = new javax.swing.JTextField();
         BtnAceptar = new javax.swing.JButton();
         BtnCancelar = new javax.swing.JButton();
-        btnGenerarQR = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Registro de Motos");
+        setTitle("Registro Vehicular");
 
-        LblRegistroM.setText("Registro de Motos");
+        LblRegistroM.setText("Registro Vehicular");
 
         LblMarcaM.setText("Marca:");
 
         LblModeloM.setText("Modelo:");
 
-        lblNumeroM.setText("Numero de Moto:");
+        lblNumeroM.setText("Numero Vehicular:");
 
         lblAño.setText("Año:");
 
@@ -75,11 +70,16 @@ public class RegistroMotos extends javax.swing.JFrame {
 
         BtnCancelar.setText("Cancelar");
         BtnCancelar.setToolTipText("");
-
-        btnGenerarQR.setText("Generar QR");
-        btnGenerarQR.addActionListener(new java.awt.event.ActionListener() {
+        BtnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGenerarQRActionPerformed(evt);
+                BtnCancelarActionPerformed(evt);
+            }
+        });
+
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
             }
         });
 
@@ -95,23 +95,32 @@ public class RegistroMotos extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(LblMarcaM)
                                 .addGap(18, 18, 18)
-                                .addComponent(jtMarcaM, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtMarcaM, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(26, 26, 26)
                                 .addComponent(LblModeloM)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jtAño, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jtModeloM, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtAño, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblNumeroM)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jtNumeroM, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtNumM, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(36, 36, 36)
                                 .addComponent(lblAño))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(LblNSerie)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(JtNSerie, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addGap(163, 163, 163)
+                                        .addComponent(BtnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(43, 43, 43)
+                                        .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(BtnAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(LblNSerie))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtSerie, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(9, 9, 9))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(144, 144, 144)
@@ -120,23 +129,11 @@ public class RegistroMotos extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(LblPlaca)
                         .addGap(18, 18, 18)
-                        .addComponent(JtPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
                         .addComponent(LblColor)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(JtColor, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(BtnAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(61, 61, 61)
-                        .addComponent(BtnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblQR, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(29, 29, 29)
-                                .addComponent(btnGenerarQR)))))
+                        .addComponent(txtColor, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -147,59 +144,53 @@ public class RegistroMotos extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LblMarcaM)
-                    .addComponent(jtMarcaM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMarcaM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LblModeloM)
-                    .addComponent(jtModeloM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNumeroM)
-                    .addComponent(jtNumeroM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNumM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblAño)
-                    .addComponent(jtAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LblPlaca)
-                    .addComponent(JtPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LblColor)
-                    .addComponent(JtColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LblNSerie)
-                    .addComponent(JtNSerie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtSerie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnAceptar)
-                    .addComponent(BtnCancelar))
-                .addGap(18, 18, 18)
-                .addComponent(lblQR, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnGenerarQR)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(BtnCancelar)
+                    .addComponent(btnSalir))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnGenerarQRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarQRActionPerformed
-        //Tomar los datos de los campos para la asignacion de moto
-        ByteArrayOutputStream Ma = QRCode.from(this.jtMarcaM.getText()).to(ImageType.PNG).stream();
-        ByteArrayOutputStream  Mo= QRCode.from(this.jtModeloM.getText()).to(ImageType.PNG).stream();
-        //ByteArrayOutputStream  Nm= QRCode.from(this.jtNumeroM.getText()).to(ImageType.PNG).stream();
-        //ByteArrayOutputStream  An= QRCode.from(this.jtAño.getText()).to(ImageType.PNG).stream();
-        //ByteArrayOutputStream  Plc= QRCode.from(this.JtPlaca.getText()).to(ImageType.PNG).stream();
-        //ByteArrayOutputStream  Clr= QRCode.from(this.JtColor.getText()).to(ImageType.PNG).stream();
-        //ByteArrayOutputStream  Ns= QRCode.from(this.JtNSerie.getText()).to(ImageType.PNG).stream();
-        //colocar los datos dentro de la imagen del QR
-        ImageIcon Ma1 = new ImageIcon(Ma.toByteArray());
-        ImageIcon Mo1 = new ImageIcon(Mo.toByteArray());
-        //ImageIcon Nm1 = new ImageIcon(Nm.toByteArray());
-        //ImageIcon An1 = new ImageIcon(An.toByteArray());
-        //ImageIcon Plc1 = new ImageIcon(Plc.toByteArray());
-        //ImageIcon Clr1 = new ImageIcon(Clr.toByteArray());
-        //ImageIcon Ns1 = new ImageIcon(Ns.toByteArray());
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+       //Regresar al menu cerrar pantalla 
+       dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void BtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarActionPerformed
+        //Limpiar formulario sin agregar a la base de datos 
+        txtMarcaM.setText("");
+        txtModelo.setText("");
+        txtNumM.setText("");
+        txtAño.setText("");
+        txtPlaca.setText("");
+        txtColor.setText("");
+        txtSerie.setText("");
         
-        this.lblQR.setIcon(Ma1,"+",Mo1);
-    }//GEN-LAST:event_btnGenerarQRActionPerformed
+        
+    }//GEN-LAST:event_BtnCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -239,22 +230,21 @@ public class RegistroMotos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnAceptar;
     private javax.swing.JButton BtnCancelar;
-    private javax.swing.JTextField JtColor;
-    private javax.swing.JTextField JtNSerie;
-    private javax.swing.JTextField JtPlaca;
     private javax.swing.JLabel LblColor;
     private javax.swing.JLabel LblMarcaM;
     private javax.swing.JLabel LblModeloM;
     private javax.swing.JLabel LblNSerie;
     private javax.swing.JLabel LblPlaca;
     private javax.swing.JLabel LblRegistroM;
-    private javax.swing.JButton btnGenerarQR;
-    private javax.swing.JTextField jtAño;
-    private javax.swing.JTextField jtMarcaM;
-    private javax.swing.JTextField jtModeloM;
-    private javax.swing.JTextField jtNumeroM;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JLabel lblAño;
     private javax.swing.JLabel lblNumeroM;
-    private javax.swing.JLabel lblQR;
+    private javax.swing.JTextField txtAño;
+    private javax.swing.JTextField txtColor;
+    private javax.swing.JTextField txtMarcaM;
+    private javax.swing.JTextField txtModelo;
+    private javax.swing.JTextField txtNumM;
+    private javax.swing.JTextField txtPlaca;
+    private javax.swing.JTextField txtSerie;
     // End of variables declaration//GEN-END:variables
 }

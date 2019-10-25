@@ -29,23 +29,24 @@ public class Mantenimientos extends javax.swing.JFrame {
 
         lblMantenimiento = new javax.swing.JLabel();
         LblEmpleado = new javax.swing.JLabel();
-        JTNombreE = new javax.swing.JTextField();
+        txtNombreE = new javax.swing.JTextField();
         LblPlacaE = new javax.swing.JLabel();
-        JTPlaca = new javax.swing.JTextField();
+        txtPlaca = new javax.swing.JTextField();
         LblUMante = new javax.swing.JLabel();
-        JTUMante = new javax.swing.JTextField();
+        txtFechaU = new javax.swing.JTextField();
         LblPMante = new javax.swing.JLabel();
-        JTPMante = new javax.swing.JTextField();
+        txtFechaP = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtCaracte = new javax.swing.JTextArea();
         LblCosto = new javax.swing.JLabel();
-        JTCosto = new javax.swing.JTextField();
+        txtCosto = new javax.swing.JTextField();
         LblCantidad = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cbPiezas = new javax.swing.JComboBox<>();
         BtnAgregar = new javax.swing.JButton();
         BtnCancelarM = new javax.swing.JButton();
         BtnBuscarM = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Mantenimiento");
@@ -62,25 +63,37 @@ public class Mantenimientos extends javax.swing.JFrame {
 
         jLabel1.setText("Caracteristicas del Mantenimiento");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtCaracte.setColumns(20);
+        txtCaracte.setRows(5);
+        jScrollPane1.setViewportView(txtCaracte);
 
         LblCosto.setText("Costo del producto:");
 
         LblCantidad.setText("Piezas:");
         LblCantidad.setToolTipText("");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbPiezas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
 
         BtnAgregar.setText("Agregar");
 
         BtnCancelarM.setText("Cancelar");
+        BtnCancelarM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCancelarMActionPerformed(evt);
+            }
+        });
 
         BtnBuscarM.setText("Buscar ");
         BtnBuscarM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnBuscarMActionPerformed(evt);
+            }
+        });
+
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
             }
         });
 
@@ -96,24 +109,24 @@ public class Mantenimientos extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(LblEmpleado)
                                 .addGap(18, 18, 18)
-                                .addComponent(JTNombreE))
+                                .addComponent(txtNombreE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(LblUMante)
                                     .addComponent(LblPMante))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(JTPMante)
-                                    .addComponent(JTUMante)))
+                                    .addComponent(txtFechaP)
+                                    .addComponent(txtFechaU)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(LblPlacaE)
                                 .addGap(18, 18, 18)
-                                .addComponent(JTPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(194, 194, 194)
                         .addComponent(lblMantenimiento)
-                        .addGap(0, 180, Short.MAX_VALUE))
+                        .addGap(0, 169, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,21 +136,22 @@ public class Mantenimientos extends javax.swing.JFrame {
                                 .addComponent(jLabel1)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(LblCosto)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(JTCosto, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(BtnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(LblCantidad)
+                                        .addComponent(txtCosto, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGap(0, 29, Short.MAX_VALUE)
-                                        .addComponent(BtnCancelarM, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addComponent(LblCantidad)
+                                        .addGap(18, 18, 18))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(BtnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(BtnCancelarM, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(27, 27, 27)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cbPiezas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(184, 184, 184)
@@ -152,19 +166,19 @@ public class Mantenimientos extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LblEmpleado)
-                    .addComponent(JTNombreE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNombreE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LblPlacaE)
-                    .addComponent(JTPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LblUMante)
-                    .addComponent(JTUMante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtFechaU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LblPMante)
-                    .addComponent(JTPMante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtFechaP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addComponent(BtnBuscarM)
                 .addGap(18, 18, 18)
@@ -174,13 +188,14 @@ public class Mantenimientos extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LblCosto)
-                    .addComponent(JTCosto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCosto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LblCantidad)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbPiezas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnAgregar)
-                    .addComponent(BtnCancelarM))
+                    .addComponent(BtnCancelarM)
+                    .addComponent(btnSalir))
                 .addGap(29, 29, 29))
         );
 
@@ -192,6 +207,22 @@ public class Mantenimientos extends javax.swing.JFrame {
         BuscarMantenimiento Bm = new BuscarMantenimiento();
         Bm.setVisible(true);
     }//GEN-LAST:event_BtnBuscarMActionPerformed
+
+    private void BtnCancelarMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarMActionPerformed
+        //Limpiar formulario 
+        txtNombreE.setText("");
+        txtPlaca.setText("");
+        txtFechaU.setText("");
+        txtFechaP.setText("");
+        txtCaracte.setText("");
+        txtCosto.setText("");        
+    }//GEN-LAST:event_BtnCancelarMActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // Cerrar
+        dispose();
+        
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,21 +263,22 @@ public class Mantenimientos extends javax.swing.JFrame {
     private javax.swing.JButton BtnAgregar;
     private javax.swing.JButton BtnBuscarM;
     private javax.swing.JButton BtnCancelarM;
-    private javax.swing.JTextField JTCosto;
-    private javax.swing.JTextField JTNombreE;
-    private javax.swing.JTextField JTPMante;
-    private javax.swing.JTextField JTPlaca;
-    private javax.swing.JTextField JTUMante;
     private javax.swing.JLabel LblCantidad;
     private javax.swing.JLabel LblCosto;
     private javax.swing.JLabel LblEmpleado;
     private javax.swing.JLabel LblPMante;
     private javax.swing.JLabel LblPlacaE;
     private javax.swing.JLabel LblUMante;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JComboBox<String> cbPiezas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblMantenimiento;
+    private javax.swing.JTextArea txtCaracte;
+    private javax.swing.JTextField txtCosto;
+    private javax.swing.JTextField txtFechaP;
+    private javax.swing.JTextField txtFechaU;
+    private javax.swing.JTextField txtNombreE;
+    private javax.swing.JTextField txtPlaca;
     // End of variables declaration//GEN-END:variables
 }

@@ -35,8 +35,7 @@ public class MenuMantenimiento extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         JMCrearM = new javax.swing.JMenuItem();
         JMAsignacion = new javax.swing.JMenu();
-        JMMoto = new javax.swing.JMenuItem();
-        JMCarro = new javax.swing.JMenuItem();
+        JmVehicular = new javax.swing.JMenuItem();
         JMProveedores = new javax.swing.JMenu();
         JMBuscarP = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -81,11 +80,13 @@ public class MenuMantenimiento extends javax.swing.JFrame {
 
         JMAsignacion.setText("Asignacion ");
 
-        JMMoto.setText("Moto ");
-        JMAsignacion.add(JMMoto);
-
-        JMCarro.setText("Carro");
-        JMAsignacion.add(JMCarro);
+        JmVehicular.setText("Vehicular");
+        JmVehicular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JmVehicularActionPerformed(evt);
+            }
+        });
+        JMAsignacion.add(JmVehicular);
 
         JMBMenu.add(JMAsignacion);
 
@@ -117,12 +118,7 @@ public class MenuMantenimiento extends javax.swing.JFrame {
 
         JMBMenu.add(JMCompras);
 
-        JmRMotos.setText("Registro de Motos");
-        JmRMotos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JmRMotosActionPerformed(evt);
-            }
-        });
+        JmRMotos.setText("Registro Vehicular");
 
         JmiRegistrarM.setText("Registrar");
         JmiRegistrarM.addActionListener(new java.awt.event.ActionListener() {
@@ -163,15 +159,17 @@ public class MenuMantenimiento extends javax.swing.JFrame {
         Man.setVisible(true);
     }//GEN-LAST:event_JMCrearMActionPerformed
 
-    private void JmRMotosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmRMotosActionPerformed
-
-    }//GEN-LAST:event_JmRMotosActionPerformed
-
     private void JmiRegistrarMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmiRegistrarMActionPerformed
         // llamar a pagina registro de motos 
         RegistroMotos RegM = new RegistroMotos();
         RegM.setVisible(true);
     }//GEN-LAST:event_JmiRegistrarMActionPerformed
+
+    private void JmVehicularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmVehicularActionPerformed
+        // llamar panatalla de asignacion vehicula
+        Asiganacion Asg = new Asiganacion();
+        Asg.setVisible(true);
+    }//GEN-LAST:event_JmVehicularActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,18 +211,17 @@ public class MenuMantenimiento extends javax.swing.JFrame {
     private javax.swing.JMenu JMAsignacion;
     private javax.swing.JMenuBar JMBMenu;
     private javax.swing.JMenu JMBuscarP;
-    private javax.swing.JMenuItem JMCarro;
     private javax.swing.JMenu JMCompraM;
     private javax.swing.JMenuItem JMCompraP;
     private javax.swing.JMenu JMCompras;
     private javax.swing.JMenuItem JMCrearM;
     private javax.swing.JMenuItem JMElaborar;
     private javax.swing.JMenu JMMantenimiento;
-    private javax.swing.JMenuItem JMMoto;
     private javax.swing.JMenu JMProveedores;
     private javax.swing.JMenu JMRegistro;
     private javax.swing.JDesktopPane JPMenu;
     private javax.swing.JMenu JmRMotos;
+    private javax.swing.JMenuItem JmVehicular;
     private javax.swing.JMenuItem JmiRegistrarM;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;

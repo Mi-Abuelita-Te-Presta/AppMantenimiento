@@ -48,15 +48,13 @@
             <Property name="text" type="java.lang.String" value="Asignacion "/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="JMMoto">
+            <MenuItem class="javax.swing.JMenuItem" name="JmVehicular">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Moto "/>
+                <Property name="text" type="java.lang.String" value="Vehicular"/>
               </Properties>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="JMCarro">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Carro"/>
-              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JmVehicularActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -110,11 +108,8 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="JmRMotos">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Registro de Motos"/>
+            <Property name="text" type="java.lang.String" value="Registro Vehicular"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JmRMotosActionPerformed"/>
-          </Events>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="JmiRegistrarM">
               <Properties>

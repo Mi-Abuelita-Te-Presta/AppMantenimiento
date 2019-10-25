@@ -36,11 +36,11 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="LblLicencia" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="JtLicencia" min="-2" pref="147" max="-2" attributes="0"/>
+                              <Component id="txtLicencia" min="-2" pref="147" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="LblNumPlaca" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField1" min="-2" pref="121" max="-2" attributes="0"/>
+                              <Component id="txtPlaca" min="-2" pref="121" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -56,7 +56,7 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="JtNombre" max="32767" attributes="0"/>
+                                  <Component id="txtNombre" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Component id="JcPuesto" min="-2" pref="145" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -64,49 +64,57 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="JcNMoto" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="JtApellido" max="32767" attributes="0"/>
+                                  <Component id="txtApellido" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="LblModelo" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="JtModelo" min="-2" pref="139" max="-2" attributes="0"/>
+                              <Component id="txtModelo" min="-2" pref="139" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="JtMarca" max="32767" attributes="0"/>
+                              <Component id="txtMarca" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                              <Component id="JtPoliza" min="-2" pref="123" max="-2" attributes="0"/>
+                              <Component id="txtPoliza" min="-2" pref="123" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                               <Component id="LblHolograma" min="-2" pref="83" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Component id="JtHolograma" max="32767" attributes="0"/>
+                              <Component id="txtHolograma" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                                      <Component id="BtnAceptarA" min="-2" pref="86" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="BtnEditarA" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="JtTarjetaC" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="BtnEditarA" min="-2" pref="100" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="BtnEliminarA" min="-2" pref="90" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="btnBuscar" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                                      <Component id="BtnEliminarA" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="BtnCancelarA" min="-2" pref="86" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnSalir" min="-2" pref="96" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="txtTarjetaC" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
-              <Component id="BtnAceptarA" min="-2" pref="86" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Component id="BtnCancelarA" min="-2" pref="86" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -118,12 +126,12 @@
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LblNombreE" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <Component id="JtApellido" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtApellido" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -135,38 +143,40 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LblLicencia" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JtLicencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtLicencia" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="LblNumPlaca" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPlaca" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LblModelo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JtModelo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtModelo" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JtMarca" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtMarca" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JtPoliza" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPoliza" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="LblHolograma" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JtHolograma" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtHolograma" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JtTarjetaC" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtTarjetaC" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="BtnAceptarA" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="BtnCancelarA" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSalir" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="BtnEditarA" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="BtnEliminarA" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="21" max="32767" attributes="0"/>
           </Group>
@@ -184,14 +194,14 @@
         <Property name="text" type="java.lang.String" value="Nombre:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JtNombre">
+    <Component class="javax.swing.JTextField" name="txtNombre">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Apellido:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JtApellido">
+    <Component class="javax.swing.JTextField" name="txtApellido">
     </Component>
     <Component class="javax.swing.JLabel" name="LblPuesto">
       <Properties>
@@ -201,11 +211,12 @@
     <Component class="javax.swing.JComboBox" name="JcPuesto">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="5">
+            <StringItem index="0" value="Administrador"/>
+            <StringItem index="1" value="Ventas"/>
+            <StringItem index="2" value="Cobranza"/>
+            <StringItem index="3" value="Sistemas"/>
+            <StringItem index="4" value="Mantenimiento"/>
           </StringArray>
         </Property>
       </Properties>
@@ -221,12 +232,7 @@
     <Component class="javax.swing.JComboBox" name="JcNMoto">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
+          <StringArray count="0"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -238,28 +244,28 @@
         <Property name="text" type="java.lang.String" value="Licencia:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JtLicencia">
+    <Component class="javax.swing.JTextField" name="txtLicencia">
     </Component>
     <Component class="javax.swing.JLabel" name="LblModelo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Modelo:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JtModelo">
+    <Component class="javax.swing.JTextField" name="txtModelo">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="text" type="java.lang.String" value="Marca:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JtMarca">
+    <Component class="javax.swing.JTextField" name="txtMarca">
     </Component>
     <Component class="javax.swing.JLabel" name="LblNumPlaca">
       <Properties>
         <Property name="text" type="java.lang.String" value="Num. Placa:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="txtPlaca">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="2"/>
       </Properties>
@@ -269,21 +275,21 @@
         <Property name="text" type="java.lang.String" value="Poliza de Seguro:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JtPoliza">
+    <Component class="javax.swing.JTextField" name="txtPoliza">
     </Component>
     <Component class="javax.swing.JLabel" name="LblHolograma">
       <Properties>
         <Property name="text" type="java.lang.String" value="Holograma:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JtHolograma">
+    <Component class="javax.swing.JTextField" name="txtHolograma">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
         <Property name="text" type="java.lang.String" value="Tarjeta de circulacion:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JtTarjetaC">
+    <Component class="javax.swing.JTextField" name="txtTarjetaC">
     </Component>
     <Component class="javax.swing.JButton" name="BtnAceptarA">
       <Properties>
@@ -294,6 +300,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnCancelarAActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BtnEditarA">
       <Properties>
@@ -304,6 +313,22 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Eliminar"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSalir">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salir"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnBuscar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuscarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

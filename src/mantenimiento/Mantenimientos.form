@@ -32,7 +32,7 @@
                           <Group type="102" attributes="0">
                               <Component id="LblEmpleado" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="JTNombreE" max="32767" attributes="0"/>
+                              <Component id="txtNombreE" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -41,14 +41,14 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="JTPMante" max="32767" attributes="0"/>
-                                  <Component id="JTUMante" max="32767" attributes="0"/>
+                                  <Component id="txtFechaP" max="32767" attributes="0"/>
+                                  <Component id="txtFechaU" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="LblPlacaE" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="JTPlaca" min="-2" pref="216" max="-2" attributes="0"/>
+                              <Component id="txtPlaca" min="-2" pref="216" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -56,37 +56,37 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
                       <Component id="lblMantenimiento" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="180" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="169" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="LblCosto" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="JTCosto" min="-2" pref="95" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="BtnAgregar" min="-2" pref="172" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="LblCantidad" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtCosto" min="-2" pref="95" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jComboBox1" max="32767" attributes="0"/>
+                                      <Component id="LblCantidad" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="0" pref="29" max="32767" attributes="0"/>
-                                      <Component id="BtnCancelarM" min="-2" pref="188" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="BtnAgregar" min="-2" pref="124" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="BtnCancelarM" min="-2" pref="136" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                   </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="cbPiezas" max="32767" attributes="0"/>
+                                  <Component id="btnSalir" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -109,22 +109,22 @@
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LblEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JTNombreE" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNombreE" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LblPlacaE" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JTPlaca" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPlaca" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LblUMante" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JTUMante" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtFechaU" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LblPMante" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JTPMante" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtFechaP" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="13" max="32767" attributes="0"/>
               <Component id="BtnBuscarM" min="-2" max="-2" attributes="0"/>
@@ -135,14 +135,15 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LblCosto" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="JTCosto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCosto" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="LblCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbPiezas" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="BtnAgregar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="BtnCancelarM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSalir" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
           </Group>
@@ -160,28 +161,28 @@
         <Property name="text" type="java.lang.String" value="Nombre Empleado:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JTNombreE">
+    <Component class="javax.swing.JTextField" name="txtNombreE">
     </Component>
     <Component class="javax.swing.JLabel" name="LblPlacaE">
       <Properties>
         <Property name="text" type="java.lang.String" value="Numero Placa:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JTPlaca">
+    <Component class="javax.swing.JTextField" name="txtPlaca">
     </Component>
     <Component class="javax.swing.JLabel" name="LblUMante">
       <Properties>
         <Property name="text" type="java.lang.String" value="Fecha del ultimo mantenimiento:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JTUMante">
+    <Component class="javax.swing.JTextField" name="txtFechaU">
     </Component>
     <Component class="javax.swing.JLabel" name="LblPMante">
       <Properties>
         <Property name="text" type="java.lang.String" value="Fecha del proximo mantenimiento:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JTPMante">
+    <Component class="javax.swing.JTextField" name="txtFechaP">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
@@ -195,7 +196,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
+        <Component class="javax.swing.JTextArea" name="txtCaracte">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
@@ -208,7 +209,7 @@
         <Property name="text" type="java.lang.String" value="Costo del producto:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JTCosto">
+    <Component class="javax.swing.JTextField" name="txtCosto">
     </Component>
     <Component class="javax.swing.JLabel" name="LblCantidad">
       <Properties>
@@ -216,14 +217,30 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox1">
+    <Component class="javax.swing.JComboBox" name="cbPiezas">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="20">
+            <StringItem index="0" value="1"/>
+            <StringItem index="1" value="2"/>
+            <StringItem index="2" value="3"/>
+            <StringItem index="3" value="4"/>
+            <StringItem index="4" value="5"/>
+            <StringItem index="5" value="6"/>
+            <StringItem index="6" value="7"/>
+            <StringItem index="7" value="8"/>
+            <StringItem index="8" value="9"/>
+            <StringItem index="9" value="10"/>
+            <StringItem index="10" value="11"/>
+            <StringItem index="11" value="12"/>
+            <StringItem index="12" value="13"/>
+            <StringItem index="13" value="14"/>
+            <StringItem index="14" value="15"/>
+            <StringItem index="15" value="16"/>
+            <StringItem index="16" value="17"/>
+            <StringItem index="17" value="18"/>
+            <StringItem index="18" value="19"/>
+            <StringItem index="19" value="20"/>
           </StringArray>
         </Property>
       </Properties>
@@ -240,6 +257,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnCancelarMActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BtnBuscarM">
       <Properties>
@@ -247,6 +267,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnBuscarMActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSalir">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salir"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
